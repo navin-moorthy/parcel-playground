@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main HTML tags -->
+    <title>Diagonal Thumbnails Slideshow | Codrops</title>
+    <meta
+      name="description"
+      content="A simple slideshow with a diagonal look."
+    />
+    <meta
+      name="keywords"
+      content="slideshow, diagonal, thumbnails, images, front end, javascript, css"
+    />
+    <meta name="author" content="Navin Moorthy" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Browser Styles -->
+    <link rel="stylesheet" href="https://use.typekit.net/ldj8uhs.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+
+    <!-- Check whether the JS is enabled or not -->
+    <script>
+      document.documentElement.className = "js";
+    </script>
+
+    <!-- Check whether the CSS Variable is supported or not -->
+    <script>
+      var supportsCssVars = function () {
+        var e,
+          t = document.createElement("style");
+        t.innerHTML = "root: { --tmp-var: bold; }";
+        document.head.appendChild(t);
+        e = !!(
+          window.CSS &&
+          window.CSS.supports &&
+          window.CSS.supports("font-weight", "var(--tmp-var)")
+        );
+        t.parentNode.removeChild(t);
+        return e;
+      };
+
+      supportsCssVars() ||
+        alert(
+          "Please view this demo in a modern browser that supports CSS Variables."
+        );
+    </script>
+  </head>
+  <body class="loading">
+    <div>Test</div>
+
+    <script src="js/demo1/index.js"></script>
+  </body>
+</html>
