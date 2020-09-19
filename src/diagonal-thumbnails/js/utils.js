@@ -1,3 +1,12 @@
+import imagesLoaded from "imagesLoaded";
+
+// Preload images
+export const preloadImages = (selector = "img") => {
+  return new Promise((resolve) => {
+    imagesLoaded(document.querySelectorAll(selector), resolve);
+  });
+};
+
 // Preload images
 export function preloadFonts(id) {
   return new Promise((resolve) => {
@@ -8,7 +17,9 @@ export function preloadFonts(id) {
   });
 }
 
-// Gets the mouse position
+/**
+ * Gets the mouse position from event
+ */
 export const getMousePosition = (event) => {
   let positionX = 0;
   let positionY = 0;
@@ -32,5 +43,7 @@ export const getMousePosition = (event) => {
   return { x: positionX, y: positionY };
 };
 
-// Linear interpolation
+/**
+ * Linear interpolation
+ */
 export const lerp = (a, b, n) => (1 - n) * a + n * b;
