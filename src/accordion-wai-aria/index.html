@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Main HTML tags -->
+    <title>Accordion WAI-ARIA</title>
+    <meta name="description" content="Accordion WAI-ARIA" />
+    <meta name="keywords" content="accordion, wai, aria" />
+    <meta name="author" content="Navin Moorthy" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+    <!-- Browser Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Accordion</h1>
+
+    <div class="Accordion-wrapper">
+      <div id="accordionGroup" class="Accordion">
+        <!-- Accordion Starts -->
+
+        <!-- Accordion 1 Button -->
+
+        <h2>
+          <button
+            type="button"
+            id="accordion1id"
+            class="Accordion-trigger"
+            aria-controls="section1"
+            aria-expanded="true"
+          >
+            <span class="Accordion-title">
+              Personal Information
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h2>
+
+        <!-- Accordion 1 Panel -->
+
+        <div
+          id="section1"
+          class="Accordion-panel"
+          role="region"
+          aria-labelledby="accordion1id"
+        >
+          <div>
+            <fieldset>
+              <p>
+                <label for="a-name">
+                  Name<span aria-hidden="true">*</span>:
+                </label>
+                <input
+                  type="text"
+                  name="a-name"
+                  id="a-name"
+                  class="required"
+                  aria-required="true"
+                />
+              </p>
+              <p>
+                <label for="a-email">
+                  Email<span aria-hidden="true">*</span>:
+                </label>
+                <input
+                  type="text"
+                  name="a-email"
+                  id="a-email"
+                  class="required"
+                  aria-required="true"
+                />
+              </p>
+              <p>
+                <label for="a-phone"> Phone: </label>
+                <input type="text" name="a-phone" id="a-phone" />
+              </p>
+              <p>
+                <label for="a-ext"> Extension: </label>
+                <input type="text" name="a-ext" id="a-ext" />
+              </p>
+              <p>
+                <label for="a-country"> Country: </label>
+                <input type="text" name="a-country" id="a-country" />
+              </p>
+              <p>
+                <label for="a-city"> City/Province: </label>
+                <input type="text" name="a-city" id="a-city" />
+              </p>
+            </fieldset>
+          </div>
+        </div>
+
+        <!-- Accordion 2 Button -->
+
+        <h2>
+          <button
+            type="button"
+            id="accordion2id"
+            class="Accordion-trigger"
+            aria-controls="section2"
+            aria-expanded="false"
+          >
+            <span class="Accordion-title">
+              Billing Address
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h2>
+
+        <!-- Accordion 2 Panel -->
+
+        <div
+          id="section2"
+          class="Accordion-panel"
+          role="region"
+          aria-labelledby="accordion2id"
+          hidden=""
+        >
+          <div>
+            <fieldset>
+              <p>
+                <label for="b-add1"> Address 1: </label>
+                <input type="text" name="b-add1" id="b-add1" />
+              </p>
+              <p>
+                <label for="b-add2"> Address 2: </label>
+                <input type="text" name="b-add2" id="b-add2" />
+              </p>
+              <p>
+                <label for="b-city"> City: </label>
+                <input type="text" name="b-city" id="b-city" />
+              </p>
+              <p>
+                <label for="b-state"> State: </label>
+                <input type="text" name="b-state" id="b-state" />
+              </p>
+              <p>
+                <label for="b-zip"> Zip Code: </label>
+                <input type="text" name="b-zip" id="b-zip" />
+              </p>
+            </fieldset>
+          </div>
+        </div>
+
+        <!-- Accordion 3 Button -->
+
+        <h2>
+          <button
+            type="button"
+            id="accordion3id"
+            class="Accordion-trigger"
+            aria-controls="section3"
+            aria-expanded="false"
+          >
+            <span class="Accordion-title">
+              Shipping Address
+              <span class="Accordion-icon"></span>
+            </span>
+          </button>
+        </h2>
+
+        <!-- Accordion 3 Panel -->
+
+        <div
+          id="section3"
+          role="region"
+          aria-labelledby="accordion3id"
+          class="Accordion-panel"
+          hidden=""
+        >
+          <div>
+            <fieldset>
+              <p>
+                <label for="m-add1"> Address 1: </label>
+                <input type="text" name="m-add1" id="m-add1" />
+              </p>
+              <p>
+                <label for="m-add2"> Address 2: </label>
+                <input type="text" name="m-add2" id="m-add2" />
+              </p>
+              <p>
+                <label for="m-city"> City: </label>
+                <input type="text" name="m-city" id="m-city" />
+              </p>
+              <p>
+                <label for="m-state"> State: </label>
+                <input type="text" name="m-state" id="m-state" />
+              </p>
+              <p>
+                <label for="m-zip"> Zip Code: </label>
+                <input type="text" name="m-zip" id="m-zip" />
+              </p>
+            </fieldset>
+          </div>
+        </div>
+
+        <!-- Accordion Ends -->
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+  </body>
+</html>

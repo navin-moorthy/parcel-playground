@@ -1,7 +1,7 @@
 {
   "name": "parcel-playground",
   "scripts": {
-    "start": "parcel src/diagonal-thumbnails/index.html --open",
+    "start": "parcel src/accordion-wai-aria/index.html --open",
     "clean": "rm -rf dist/*",
     "build:parcel": "parcel build src/index.html --no-content-hash --no-minify --no-source-maps --public-url ./",
     "build": "npm run clean && npm run build:parcel"
